@@ -26,7 +26,9 @@
                 <ul class="nav-menu">
                     <li><a href="#inicio" data-translate="nav-home">Inicio</a></li>
                     <li><a href="#servicios" data-translate="nav-services">Servicios</a></li>
+                    <li><a href="#testimonios" data-translate="nav-testimonials">Testimonios</a></li>
                     <li><a href="#reservar" data-translate="nav-booking">Reservar</a></li>
+                    <!-- <li><a href="#videos" data-translate="nav-videos">Videos</a></li> -->
                     <li><a href="#ubicacion" data-translate="nav-location">Ubicación</a></li>
                     <li><a href="#contacto" data-translate="nav-contact">Contacto</a></li>
                 </ul>
@@ -74,7 +76,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (Dynamic from Firebase) -->
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-header">
@@ -83,155 +85,32 @@
                 <div class="section-decoration"></div>
             </div>
             
-            <div class="services-grid">
-                <!-- Masaje Ayurvédico -->
-                <div class="service-card" data-service="ayurveda">
-                    <div class="service-image">
-                        <img src="images/masaje_ayurveda.png" alt="Masaje Ayurvédico">
-                        <div class="service-overlay">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-ayurveda-title">Masaje Ayurvédico</h3>
-                        <p data-translate="service-ayurveda-desc">Medicina tradicional de la India que utiliza aceites medicados y movimientos específicos para equilibrar las energías vitales, desintoxicar el cuerpo y promover la relajación profunda.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-energy">Equilibrio energético</span>
-                            <span class="benefit-tag" data-translate="benefit-detox">Desintoxicación</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Masaje Sueco -->
-                <div class="service-card" data-service="sueco">
-                    <div class="service-image">
-                        <img src="images/masaje_sueco.png" alt="Masaje Sueco">
-                        <div class="service-overlay">
-                            <i class="fas fa-hands"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-swedish-title">Masaje Sueco</h3>
-                        <p data-translate="service-swedish-desc">Técnica clásica que utiliza movimientos largos y fluidos, amasamiento y fricción para relajar los músculos, mejorar la circulación y aliviar la tensión corporal.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-muscle">Relajación muscular</span>
-                            <span class="benefit-tag" data-translate="benefit-circulation">Mejora circulación</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quiromasaje -->
-                <div class="service-card" data-service="quiromasaje">
-                    <div class="service-image">
-                        <img src="images/quiromasaje.png" alt="Quiromasaje">
-                        <div class="service-overlay">
-                            <i class="fas fa-hand-holding-heart"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-chiro-title">Quiromasaje</h3>
-                        <p data-translate="service-chiro-desc">Técnica manual que utiliza diversas manipulaciones sobre los tejidos blandos para aliviar dolores musculares, mejorar la circulación y promover el bienestar general.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-pain">Alivio del dolor</span>
-                            <span class="benefit-tag" data-translate="benefit-wellness">Bienestar general</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Masaje Shiatsu -->
-                <div class="service-card" data-service="shiatsu">
-                    <div class="service-image">
-                        <img src="images/masaje_shiatsu.jpg" alt="Masaje Shiatsu">
-                        <div class="service-overlay">
-                            <i class="fas fa-yin-yang"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-shiatsu-title">Masaje Shiatsu</h3>
-                        <p data-translate="service-shiatsu-desc">Terapia japonesa que utiliza presión de dedos y palmas sobre puntos específicos del cuerpo para equilibrar la energía vital y mejorar la salud general.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-energy">Equilibrio energético</span>
-                            <span class="benefit-tag" data-translate="benefit-health">Salud integral</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Masaje Craneofacial -->
-                <div class="service-card" data-service="craneofacial">
-                    <div class="service-image">
-                        <img src="images/masaje_craneofacial.png" alt="Masaje Craneofacial">
-                        <div class="service-overlay">
-                            <i class="fas fa-head-side-brain"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-cranio-title">Masaje Craneofacial</h3>
-                        <p data-translate="service-cranio-desc">Técnica especializada en cabeza, cara, cuello y hombros que ayuda a aliviar tensión, estrés, dolores de cabeza y migrañas, mejorando la circulación.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-migraine">Alivio de migrañas</span>
-                            <span class="benefit-tag" data-translate="benefit-stress">Reduce estrés</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Masaje Champi -->
-                <div class="service-card" data-service="champi">
-                    <div class="service-image">
-                        <img src="images/masaje_champi.png" alt="Masaje Champi">
-                        <div class="service-overlay">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-champi-title">Masaje Champi</h3>
-                        <p data-translate="service-champi-desc">Técnica tradicional india enfocada en cabeza, cuello y hombros que alivia la tensión, mejora la circulación del cuero cabelludo y promueve la calma.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-relaxation">Relajación profunda</span>
-                            <span class="benefit-tag" data-translate="benefit-scalp">Mejora capilar</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Masaje Sotai -->
-                <div class="service-card" data-service="sotai">
-                    <div class="service-image">
-                        <img src="images/masaje_sotai.png" alt="Masaje Sotai">
-                        <div class="service-overlay">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-sotai-title">Masaje Sotai</h3>
-                        <p data-translate="service-sotai-desc">Terapia japonesa de reeducación postural que corrige desequilibrios y alivia el dolor a través de movimientos suaves y naturales guiados por el terapeuta.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-posture">Corrección postural</span>
-                            <span class="benefit-tag" data-translate="benefit-movement">Movimiento natural</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Masaje Holístico -->
-                <div class="service-card" data-service="holistico">
-                    <div class="service-image">
-                        <img src="images/masaje_holistico_nueva.png" alt="Masaje Holístico">
-                        <div class="service-overlay">
-                            <i class="fas fa-infinity"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-translate="service-holistic-title">Masaje Holístico</h3>
-                        <p data-translate="service-holistic-desc">Enfoque integral que considera cuerpo, mente y espíritu, combinando diversas técnicas para abordar el bienestar físico, emocional y mental.</p>
-                        <div class="service-benefits">
-                            <span class="benefit-tag" data-translate="benefit-integral">Bienestar integral</span>
-                            <span class="benefit-tag" data-translate="benefit-balance">Equilibrio total</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Contenedor para servicios cargados desde Firebase -->
+            <div class="services-grid" id="services-grid">
+                <!-- Las tarjetas de servicio se cargarán aquí dinámicamente -->
+                <p class="loading-placeholder" style="text-align: center; width: 100%;">Cargando servicios...</p>
             </div>
         </div>
     </section>
 
-    <!-- Booking Section -->
+    <!-- Testimonials Section (Dynamic from Firebase) -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="testimonials-title">Testimonios</h2>
+                <p class="section-subtitle" data-translate="testimonials-subtitle">Lo que nuestros clientes dicen</p>
+                <div class="section-decoration"></div>
+            </div>
+            
+            <!-- Contenedor para testimonios cargados desde Firebase -->
+            <div class="testimonials-grid" id="testimonials-grid">
+                <!-- Los testimonios se cargarán aquí -->
+                <p class="loading-placeholder" style="text-align: center; width: 100%;">Cargando testimonios...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section (Formulario actualizado) -->
     <section id="reservar" class="booking">
         <div class="container">
             <div class="section-header">
@@ -246,15 +125,17 @@
                         <div class="hours-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h3 data-translate="booking-hours-title">Horario de Atención</h3>
+                        <h3 data-translate="booking-hours-title">Horario de Atención (Cancún)</h3>
                         <p data-translate="booking-hours-days">Lunes a Viernes</p>
-                        <p class="hours-time">9:00 AM - 6:00 PM</p>
+                        <p class="hours-time">9:00 AM - 7:00 PM</p>
+                        <p data-translate="booking-hours-sat">Sábado</p>
+                        <p class="hours-time">9:00 AM - 3:00 PM</p>
                     </div>
                     
                     <div class="booking-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
-                            <span data-translate="feature-1">Confirmación inmediata</span>
+                            <span data-translate="feature-1">Confirmación de reserva</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
@@ -268,33 +149,61 @@
                 </div>
                 
                 <div class="booking-form-container">
+                    <!-- INICIO DEL FORMULARIO ACTUALIZADO -->
                     <form id="appointmentForm" class="appointment-form">
+                        
                         <div class="form-group">
                             <label for="cliente" data-translate="form-name">Nombre Completo</label>
                             <div class="input-wrapper">
                                 <i class="fas fa-user"></i>
-                                <input type="text" id="cliente" name="cliente" required placeholder="" data-translate-placeholder="placeholder-name">
+                                <input type="text" id="cliente" name="cliente" required data-translate-placeholder="placeholder-name">
                             </div>
                             <div class="error-text" id="cliente-error"></div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="telefono" data-translate="form-phone">Teléfono</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-phone"></i>
-                                <input type="tel" id="telefono" name="telefono" required placeholder="" data-translate-placeholder="placeholder-phone">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono" data-translate="form-phone">Teléfono</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="telefono" name="telefono" required data-translate-placeholder="placeholder-phone">
+                                </div>
+                                <div class="error-text" id="telefono-error"></div>
                             </div>
-                            <div class="error-text" id="telefono-error"></div>
+
+                            <div class="form-group">
+                                <label for="correo" data-translate="form-email">Correo Electrónico</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="correo" name="correo" required data-translate-placeholder="placeholder-email">
+                                </div>
+                                <div class="error-text" id="correo-error"></div>
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="correo" data-translate="form-email">Correo Electrónico</label>
+                            <!-- Texto de la label actualizado para reflejar la nueva lógica -->
+                            <label for="tipoMasaje" data-translate="form-massage-type">Tipo de Servicio (Todos 60 min)</label>
                             <div class="input-wrapper">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" id="correo" name="correo" required placeholder="" data-translate-placeholder="placeholder-email">
+                                <i class="fas fa-spa"></i>
+                                <!-- Opciones actualizadas según el nuevo formulario -->
+                                <select id="tipoMasaje" name="tipoMasaje" required>
+                                    <option value="" disabled selected data-translate="placeholder-select-massage">Selecciona un servicio</option>
+                                    <option value="holistico">Holístico</option>
+                                    <option value="sueco">Sueco</option>
+                                    <option value="ayurveda">Ayurveda</option>
+                                    <option value="quiromasaje">Quiromasaje</option>
+                                    <option value="shiatsu">Shiatsu</option>
+                                    <option value="champi">Champi</option>
+                                    <option value="sotai">Sotai</option>
+                                    <option value="craneofacial">Craneofacial</option>
+                                    <option value="fusion">Fusión</option>
+                                </select>
                             </div>
-                            <div class="error-text" id="correo-error"></div>
+                            <div class="error-text" id="tipoMasaje-error"></div>
                         </div>
+
+                        <!-- CAMPO DE DURACIÓN SIGUE ELIMINADO -->
 
                         <div class="form-row">
                             <div class="form-group">
@@ -307,10 +216,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="hora" data-translate="form-time">Hora</label>
+                                <label for="hora" data-translate="form-time">Hora de Inicio</label>
                                 <div class="input-wrapper">
                                     <i class="fas fa-clock"></i>
-                                    <input type="time" id="hora" name="hora" required min="09:00" max="18:00">
+                                    <input type="time" id="hora" name="hora" required min="09:00">
                                 </div>
                                 <div class="error-text" id="hora-error"></div>
                             </div>
@@ -324,11 +233,15 @@
                         </button>
                     </form>
 
+                    <!-- Div de mensaje con la clase de Triada -->
                     <div id="message" class="booking-message"></div>
+                    <!-- FIN DEL FORMULARIO ACTUALIZADO -->
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- SECCIÓN DE VIDEOS ELIMINADA -->
 
     <!-- Location Section -->
     <section id="ubicacion" class="location">
@@ -383,7 +296,7 @@
                 
                 <div class="map-container">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.8!2d-86.8293209!3d21.1523497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bfbcbb667ed%3A0x6a3600ebb47863e8!2sCentella%207%2C%2077505%20Canc%C3%BAn%2C%20Q.R.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!m12!1m3!1d3722.8!2d-86.8293209!3d21.1523497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bfbcbb667ed%3A0x6a3600ebb47863e8!2sCentella%207%2C%2077505%20Canc%C3%BAn%2C%20Q.R.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
                         width="100%" 
                         height="400" 
                         style="border:0;" 
@@ -415,7 +328,8 @@
                 <div class="contact-info">
                     <h3 data-translate="contact-info-title">Información de Contacto</h3>
                     <div class="contact-cards">
-                        <div class="contact-card">
+                        <!-- ENLACE DE WHATSAPP HABILITADO -->
+                        <a href="https://wa.me/5214581019800" target="_blank" class="contact-card" style="text-decoration: none;">
                             <div class="contact-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
@@ -424,7 +338,7 @@
                                 <p>458-101-9800</p>
                                 <small data-translate="appointment-required">Previa cita requerida</small>
                             </div>
-                        </div>
+                        </a>
                         
                         <div class="contact-card">
                             <div class="contact-icon">
@@ -443,8 +357,8 @@
                             </div>
                             <div class="contact-details">
                                 <h4 data-translate="hours-title">Horarios</h4>
-                                <p data-translate="hours-schedule">Lunes a Viernes</p>
-                                <small data-translate="hours-time">9:00 AM - 8:00 PM PREVIA CITA</small>
+                                <p data-translate="hours-schedule">Lunes a Viernes: 9am - 7pm</p>
+                                <small data-translate="hours-time">Sábado: 9am - 3pm (PREVIA CITA)</small>
                             </div>
                         </div>
                     </div>
@@ -453,15 +367,18 @@
                 <div class="social-section">
                     <h3 data-translate="social-title">Síguenos en Redes Sociales</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=61566434844051" target="_blank" class="social-link facebook">
+                        <!-- ENLACE DE FACEBOOK ACTUALIZADO -->
+                        <a href="https://www.facebook.com/people/Triada-Bienestar/61577993232616/#" target="_blank" class="social-link facebook">
                             <i class="fab fa-facebook-f"></i>
                             <span>Facebook</span>
                         </a>
-                        <a href="https://www.instagram.com/triada_bienestar/" target="_blank" class="social-link instagram">
+                        <!-- ENLACE DE INSTAGRAM ACTUALIZADO -->
+                        <a href="https://www.instagram.com/bienestartriada" target="_blank" class="social-link instagram">
                             <i class="fab fa-instagram"></i>
                             <span>Instagram</span>
                         </a>
-                        <a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="social-link maps">
+                        <!-- ENLACE DE GOOGLE MAPS ACTUALIZADO -->
+                        <a href="https://maps.app.goo.gl/t9vB9aKjZk3TqL4J6" target="_blank" class="social-link maps">
                             <i class="fas fa-map-marker-alt"></i>
                             <span data-translate="maps-link">Google Maps</span>
                         </a>
@@ -487,7 +404,43 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts de Firebase -->
+    <script type="module">
+        // Importa las funciones que necesitas de los SDKs
+        // Reemplaza con tus propios scripts de Firebase si usas una versión diferente
+        // Estas son para la v11.6.1
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, doc, onSnapshot, addDoc, getDoc, setDoc, updateDoc, deleteDoc, query, where, getDocs, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
+
+        // Pasa las funciones al objeto global 'window' para que script.js pueda usarlas
+        window.firebase = {
+            initializeApp,
+            getAuth,
+            signInAnonymously,
+            signInWithCustomToken,
+            onAuthStateChanged,
+            getFirestore,
+            collection,
+            doc,
+            onSnapshot,
+            addDoc,
+            getDoc,
+            setDoc,
+            updateDoc,
+            deleteDoc,
+            query,
+            where,
+            getDocs,
+            setLogLevel,
+            getStorage,
+            ref,
+            getDownloadURL
+        };
+    </script>
+
+    <!-- Scripts del sitio -->
     <script src="script.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js" defer></script>
     <script src="https://files.bpcontent.cloud/2025/07/18/01/20250718012102-8Q7UKJYM.js" defer></script>

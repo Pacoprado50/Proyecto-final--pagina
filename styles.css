@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px;
 }
 
-/* Header Mejorado */
+/* Header Agrandado */
 .header {
     position: fixed;
     top: 0;
@@ -125,21 +125,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
+    /* Padding aumentado */
+    padding: 1.5rem 2.5rem; 
+    max-width: 1400px; /* Aumentado para más espacio */
     margin: 0 auto;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px; /* Gap aumentado */
     text-decoration: none;
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
+    /* Tamaño aumentado */
+    width: 60px; 
+    height: 60px;
     object-fit: contain;
     transition: var(--transition-normal);
 }
@@ -149,7 +151,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo span {
-    font-size: 1.5rem;
+    /* Fuente aumentada */
+    font-size: 1.8rem; 
     font-weight: 700;
     color: var(--primary-color);
     font-family: 'Playfair Display', serif;
@@ -158,14 +161,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2.5rem; /* Gap mantenido, se puede ajustar */
 }
 
 .nav-menu a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1rem; /* Ligeramente más grande */
     transition: var(--transition-normal);
     position: relative;
     padding: 0.5rem 0;
@@ -213,6 +216,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     overflow: hidden;
+    /* Ajuste para el header más grande */
+    padding-top: 100px; 
 }
 
 .hero-background {
@@ -242,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    padding: 120px 2rem 2rem;
+    padding: 2rem 2rem; /* Padding superior reducido por el padding-top del hero */
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -435,8 +440,9 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
-    cursor: pointer;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se alinee */
 }
 
 .service-card:hover {
@@ -489,6 +495,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-content {
     padding: 2rem;
+    flex-grow: 1; /* Permite que el contenido crezca */
+    display: flex;
+    flex-direction: column;
 }
 
 .service-content h3 {
@@ -501,12 +510,14 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    flex-grow: 1; /* Empuja los beneficios hacia abajo */
 }
 
 .service-benefits {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    margin-top: auto; /* Alinea al fondo */
 }
 
 .benefit-tag {
@@ -518,10 +529,66 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+/* --- Nueva Sección: Testimonios --- */
+.testimonials {
+    padding: 100px 0;
+    background: var(--light-gray);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    border-left: 5px solid var(--primary-color);
+    transition: var(--transition-normal);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-card blockquote {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.testimonial-card blockquote::before {
+    content: '“';
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: var(--primary-light);
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    line-height: 1;
+}
+
+.testimonial-card footer {
+    margin-top: 1.5rem;
+    text-align: right;
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+}
+/* --- Fin Sección Testimonios --- */
+
 /* Booking Section */
 .booking {
     padding: 100px 0;
-    background: var(--light-gray);
+    background: var(--white); /* Cambiado a blanco para alternar */
 }
 
 .booking-content {
@@ -532,14 +599,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .business-hours-card {
-    background: var(--white);
+    background: var(--light-gray); /* Fondo gris claro */
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
     text-align: center;
     border: 1px solid var(--border-color);
     position: sticky;
-    top: 100px;
+    top: 120px; /* Ajustado por el header más grande */
 }
 
 .hours-icon {
@@ -601,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .booking-form-container {
-    background: var(--white);
+    background: var(--light-gray); /* Fondo gris claro */
     padding: 3rem;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
@@ -632,9 +699,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
     font-size: 1rem;
     z-index: 1;
+    pointer-events: none; /* Para que el clic atraviese al select */
 }
 
-.input-wrapper input {
+.input-wrapper input,
+.input-wrapper select {
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
     border: 1px solid var(--border-color);
@@ -644,9 +713,27 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-normal);
     background: var(--white);
     color: var(--text-dark);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.input-wrapper input:focus {
+/* Estilo específico para select para el icono de flecha */
+.input-wrapper select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23A0AEC0' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem; /* Espacio para el icono de FA y la flecha */
+}
+
+.input-wrapper select:disabled {
+    background-color: var(--medium-gray);
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(123, 154, 139, 0.1);
@@ -759,10 +846,13 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
 }
 
+/* --- SECCIÓN DE VIDEOS ELIMINADA --- */
+
+
 /* Location Section Mejorado */
 .location {
     padding: 100px 0;
-    background: var(--light-gray);
+    background: var(--white); /* Alternar color */
 }
 
 .location-content {
@@ -784,7 +874,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 12px;
     margin-bottom: 2.5rem;
     padding: 1.5rem;
-    background: var(--white);
+    background: var(--light-gray); /* Fondo gris */
     border-radius: 15px;
     box-shadow: var(--shadow-sm);
 }
@@ -857,7 +947,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 1.5rem;
     padding: 2rem;
-    background: var(--white);
+    background: var(--light-gray); /* Fondo gris */
     border-radius: 15px;
     box-shadow: var(--shadow-sm);
     border-left: 4px solid var(--primary-color);
@@ -928,7 +1018,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact Section Mejorado */
 .contact {
     padding: 100px 0;
-    background: var(--white);
+    background: var(--light-gray); /* Fondo gris */
 }
 
 .contact-content {
@@ -954,10 +1044,12 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 1.5rem;
     padding: 2rem;
-    background: var(--light-gray);
+    background: var(--white); /* Tarjetas blancas */
     border-radius: 15px;
     transition: var(--transition-normal);
     border: 1px solid var(--border-color);
+    /* Color de texto para enlaces <a> */
+    color: inherit; 
 }
 
 .contact-card:hover {
@@ -1016,7 +1108,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem 2rem;
-    background: var(--light-gray);
+    background: var(--white); /* Tarjetas blancas */
     border-radius: 15px;
     text-decoration: none;
     transition: var(--transition-normal);
@@ -1071,11 +1163,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
 }
 
-/* Footer */
+/* Footer Agrandado */
 .footer {
     background: var(--text-dark);
     color: var(--white);
-    padding: 3rem 0;
+    padding: 4rem 0; /* Padding aumentado */
     text-align: center;
 }
 
@@ -1083,23 +1175,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem; /* Gap aumentado */
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px; /* Gap aumentado */
 }
 
 .footer-logo img {
-    width: 40px;
-    height: 40px;
+    width: 50px; /* Tamaño aumentado */
+    height: 50px;
     object-fit: contain;
 }
 
 .footer-logo span {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* Fuente aumentada */
     font-weight: 700;
     color: var(--primary-light);
     font-family: 'Playfair Display', serif;
@@ -1108,12 +1200,22 @@ h1, h2, h3, h4, h5, h6 {
 .footer-text p {
     margin-bottom: 0.5rem;
     color: var(--text-muted);
+    font-size: 1rem; /* Fuente aumentada */
 }
 
 .footer-text p:last-child {
     color: var(--primary-light);
     font-style: italic;
 }
+
+/* Placeholder para carga dinámica */
+.loading-placeholder {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    padding: 3rem;
+}
+
 
 /* Animaciones de carga */
 .loading {
@@ -1146,6 +1248,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .business-hours-card {
         position: static;
+        top: 0; /* Reset sticky top */
     }
     
     .location-content {
@@ -1174,13 +1277,21 @@ h1, h2, h3, h4, h5, h6 {
     .nav-container {
         padding: 1rem;
     }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+    .logo span {
+        font-size: 1.5rem;
+    }
     
     .nav-menu {
         position: fixed;
-        top: 80px;
+        top: 75px; /* Ajustado al header responsive */
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 75px);
         background: var(--white);
         flex-direction: column;
         justify-content: flex-start;
@@ -1219,8 +1330,12 @@ h1, h2, h3, h4, h5, h6 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
     
+    .hero {
+        padding-top: 75px; /* Ajuste para header responsive */
+    }
+
     .hero-content {
-        padding: 100px 1rem 2rem;
+        padding: 2rem 1rem;
         gap: 2rem;
     }
     
@@ -1264,6 +1379,14 @@ h1, h2, h3, h4, h5, h6 {
     .service-card {
         margin: 0 1rem;
     }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .testimonial-card {
+        margin: 0 1rem;
+    }
     
     .booking-form-container {
         padding: 2rem 1.5rem;
@@ -1272,6 +1395,14 @@ h1, h2, h3, h4, h5, h6 {
     .form-row {
         grid-template-columns: 1fr;
     }
+
+    /* .videos-grid { // ELIMINADO
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .video-card { // ELIMINADO
+        margin: 0 1rem;
+    } */
     
     .location-images {
         grid-template-columns: 1fr;
@@ -1350,6 +1481,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Focus states para accesibilidad */
 .service-card:focus,
+.testimonial-card:focus,
+/* .video-card:focus, // ELIMINADO */
 .contact-card:focus,
 .social-link:focus,
 .btn-primary:focus,
@@ -1375,7 +1508,11 @@ h1, h2, h3, h4, h5, h6 {
     .header,
     .hero-scroll-indicator,
     .language-selector,
-    .booking {
+    .booking,
+    .testimonials,
+    /* .videos { // ELIMINADO
+        display: none;
+    } */ {
         display: none;
     }
     
